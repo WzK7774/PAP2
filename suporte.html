@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="suporte.css">
+    <title>Suporte</title>
+</head>
+<body>
+    <header>
+        <h1>Fale Conosco</h1>
+        <p>Estamos aqui para ajudar com o seu sistema de rega inteligente</p>
+    </header>
+
+    <div class="support-container">
+        <header>
+            <h1>Fale Conosco</h1>
+            <p>Estamos aqui para ajudar com o seu sistema de rega</p>
+        </header>
+
+        <div class="content">
+            <h2>Entre em Contato</h2>
+            <p>Preencha o formulário abaixo e nossa equipe entrará em contato com você em breve.</p>
+            <form id="supportForm">
+                <div class="input-group">
+                    <label for="name">Seu Nome</label>
+                    <input type="text" id="name" placeholder="Digite seu nome" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Seu Email</label>
+                    <input type="email" id="email" placeholder="Digite seu email" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" rows="5" placeholder="Descreva seu problema" required></textarea>
+                </div>
+                <div class="input-group">
+                    <button type="submit">Enviar Mensagem</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="contact-info">
+            <p>Ou entre em contato diretamente:</p>
+            <p>Email: <a href="mailto:suporte@sistemaderega.com">suporte@sistemaderega.com</a></p>
+            <p>Telefone: <a href="tel:+5511999999999">+55 11 99999-9999</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('supportForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio padrão do formulário
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Exemplo de envio para backend ou exibição de mensagem
+            alert(`Obrigado, ${name}! Sua mensagem foi enviada com sucesso.`);
+
+            // Limpar o formulário após o envio
+            document.getElementById('supportForm').reset();
+        });
+    </script>
+</body>
+</html>

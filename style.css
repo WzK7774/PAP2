@@ -1,0 +1,148 @@
+ /* Body Styling */
+ body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fb;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  /* Alinha o conteúdo ao centro */
+    height: 100vh;
+}
+
+/* Header Styling */
+header {
+    background-color: #4caf50;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Main Container */
+.main-container {
+    margin: 40px auto;
+    max-width: 1200px;
+    width: 90%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    animation: fadeIn 0.6s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha a tabela no centro */
+}
+
+/* Status Table Styling */
+.status-table {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centraliza a tabela horizontalmente */
+}
+
+.status-table .table {
+    width: 80%; /* Ajuste para centralizar melhor */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.status-table .table th,
+.status-table .table td {
+    padding: 18px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.status-table .table th {
+    background-color: #4caf50;
+    color: white;
+}
+
+.status-table .table td {
+    background-color: #ecf0f1;
+}
+
+.status-table .badge {
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 25px;
+}
+
+.badge-success {
+    background-color: #27ae60;
+    color: white;
+}
+
+.badge-danger {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    width: 100%;
+}
+
+footer a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* FadeIn Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .main-container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .status-table .table {
+        width: 100%; /* Garantir que a tabela ocupe toda a largura disponível em telas menores */
+    }
+}
