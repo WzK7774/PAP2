@@ -7,6 +7,10 @@
     <title>Suporte</title>
 </head>
 <body>
+    <!-- Botão de voltar -->
+     <a href="iniciopap.html">
+    <button id="backButton" class="back-btn">Voltar</button>
+    </a>
     <header>
         <h1>Fale Conosco</h1>
         <p>Estamos aqui para ajudar com o seu sistema de rega inteligente</p>
@@ -14,8 +18,8 @@
 
     <div class="support-container">
         <header>
-            <h1>Fale Conosco</h1>
-            <p>Estamos aqui para ajudar com o seu sistema de rega</p>
+            <h1>Formulário</h1>
+            <p>Por favor, deixe a sua dúvida para que possamos ajudá-lo da melhor forma possível.</p>
         </header>
 
         <div class="content">
@@ -60,6 +64,11 @@
 
             // Limpar o formulário após o envio
             document.getElementById('supportForm').reset();
+        });
+
+        // Função para o botão voltar
+        document.getElementById('backButton').addEventListener('click', function() {
+            window.history.back();
         });
     </script>
 </body>

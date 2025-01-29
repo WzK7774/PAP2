@@ -1,4 +1,10 @@
 body {
+    background-image: url('Imagens/fundosuporte.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.9; /* Ajuste a opacidade da imagem de fundo */
+    position: relative;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -8,23 +14,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    z-index: 0; /* Garante que a imagem de fundo fique atrás de todo o conteúdo */
 }
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: #4caf50;
-    color: white;
-    border-radius: 8px 8px 0 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-header p {
-    margin: 5px 0 0;
-    font-size: 1rem;
-}
+
 .support-container {
     max-width: 600px;
     width: 90%;
@@ -33,22 +25,49 @@ header p {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     animation: fadeIn 0.5s ease-in-out;
+    position: relative; /* Agora a posição está relativa para não interferir no layout */
+    z-index: 1; /* Garante que o conteúdo da caixa de suporte esteja visível sobre a imagem */
 }
-.support-container h2 {
+
+header {
     text-align: center;
+    padding: 20px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+}
+
+.content h2 {
     color: #4caf50;
-    margin: 20px 0 10px;
     font-size: 1.8rem;
 }
-.support-container p {
-    text-align: center;
-    margin-bottom: 20px;
+
+.content p {
     font-size: 1rem;
     padding: 0 20px;
 }
+
 .input-group {
-    margin: 15px 20px;
+    margin: 15px 0;
+    padding: 0 20px;
 }
+
 .input-group label {
     display: block;
     margin-bottom: 5px;
@@ -56,6 +75,7 @@ header p {
     font-size: 0.9rem;
     color: #555;
 }
+
 .input-group input, .input-group textarea {
     width: 100%;
     padding: 12px;
@@ -65,13 +85,16 @@ header p {
     box-sizing: border-box;
     transition: box-shadow 0.3s ease-in-out;
 }
+
 .input-group input:focus, .input-group textarea:focus {
     outline: none;
     box-shadow: 0 0 6px rgba(76, 175, 80, 0.5);
 }
+
 .input-group textarea {
     resize: vertical;
 }
+
 .input-group button {
     width: 100%;
     padding: 12px;
@@ -83,9 +106,11 @@ header p {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 .input-group button:hover {
     background-color: #45a049;
 }
+
 .contact-info {
     text-align: center;
     margin-top: 20px;
@@ -93,15 +118,18 @@ header p {
     border-top: 1px solid #f0f0f0;
     background-color: #fafafa;
 }
+
 .contact-info p {
     margin: 5px 0;
     font-size: 0.9rem;
 }
+
 .contact-info a {
     color: #4caf50;
     text-decoration: none;
     font-weight: bold;
 }
+
 .contact-info a:hover {
     text-decoration: underline;
 }
@@ -116,3 +144,22 @@ header p {
         transform: translateY(0);
     }
 }
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px; 
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 2; /* Garante que o botão fique sobre a imagem de fundo */
+}
+
+.back-btn:hover {
+    background-color: #45a049;
+}
+

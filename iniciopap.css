@@ -1,138 +1,231 @@
-     /* General Body Styling */
-     body {
-        font-family: 'Roboto', sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f7fb;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        box-sizing: border-box;
-    }
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    /* Header Styling */
-    header {
-        background-color: #4caf50;
-        color: white;
-        padding: 60px 20px;
-        text-align: center;
-        width: 100%;
-        border-radius: 0 0 25px 25px;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        animation: fadeIn 1s ease-out;
-    }
+/* Corpo da página */
+body {
+    background-image: url('Imagens/fundoinicio\ \(2\).jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    overflow: hidden; /* Impede o scroll */
+    height: 100vh; /* Garante que a altura seja 100% da tela */
+}
 
+/* Header */
+header {
+    background: linear-gradient(135deg, #4caf50, #1e7e34);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    height: 20%; /* Limita a altura do header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+header p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+/* Navegação */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #2c6e348e;
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 100%; /* Garante que a navbar ocupe toda a largura */
+    border-radius: 25px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+/* Conteúdo Principal */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 60%; /* Limita a altura do conteúdo */
+    padding: 20px;
+}
+
+/* Seção de introdução */
+.intro {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 30px;
+    flex: 1;
+}
+
+.text-container {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.text-container h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 250, 42, 0.377); /* Adiciona sombra ao texto */
+}
+
+.text-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 300;
+    color: #555;
+    text-shadow: 2px 2px 5px rgba(4, 82, 17, 0.692); /* Adiciona sombra ao texto */
+}
+
+/* Imagem */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 20px;
+    border-radius: 20px 20px 0 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%; /* Garante que o footer ocupe toda a largura */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Efeito de transição suave */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #45a049;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 768px) {
     header h1 {
-        margin: 0;
-        font-size: 3.5rem;
-        font-weight: 700;
-        text-transform: uppercase;
-    }
-
-    header p {
-        font-size: 1.3rem;
-        margin-top: 10px;
-        font-weight: 500;
-    }
-
-    /* Main Content Styling */
-    .main-content {
-        margin-top: 50px;
-        text-align: center;
-        max-width: 800px;
-        width: 90%;
-    }
-
-    .main-content h2 {
         font-size: 2rem;
-        margin-bottom: 30px;
-        color: #2c3e50;
-        font-weight: 600;
+    }
+    
+    header p {
+        font-size: 1rem;
     }
 
-    .main-content a {
-        display: inline-block;
-        margin: 15px 30px;
-        padding: 20px 40px;
-        background-color: #4caf50;
-        color: white;
-        text-decoration: none;
-        font-size: 1.3rem;
-        font-weight: 600;
-        border-radius: 10px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease-in-out;
+    .navbar ul {
+        flex-direction: column;
     }
 
-    .main-content a:hover {
-        background-color: #45a049;
-        transform: translateY(-5px);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    .navbar ul li {
+        margin: 10px 0;
     }
 
-    .main-content a:active {
-        transform: translateY(0);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Footer Styling */
-    footer {
-        background-color: #4caf50;
-        color: white;
-        text-align: center;
+    .intro {
+        flex-direction: column;
         padding: 20px;
-        width: 100%;
-        margin-top: auto;
     }
 
-    footer p {
-        font-size: 0.9rem;
-        margin: 0;
+    .text-container h2 {
+        font-size: 1.8rem;
     }
 
-    footer a {
-        color: #ecf0f1;
-        text-decoration: none;
-        font-weight: bold;
-        transition: color 0.3s ease-in-out;
+    .text-container p {
+        font-size: 1rem;
     }
 
-    footer a:hover {
-        color: #4caf50;
-        text-decoration: underline;
+    .image-container img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .navbar ul li a {
+        font-size: 1rem;
+        padding: 8px 15px;
     }
 
-    /* FadeIn Animation */
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(-30px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    .text-container h2 {
+        font-size: 1.5rem;
     }
 
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        header h1 {
-            font-size: 2.5rem;
-        }
-
-        header p {
-            font-size: 1rem;
-        }
-
-        .main-content h2 {
-            font-size: 1.5rem;
-        }
-
-        .main-content a {
-            padding: 15px 30px;
-            font-size: 1.1rem;
-        }
+    .intro {
+        padding: 15px;
     }
+
+    .image-container img {
+        max-width: 100%;
+    }
+}
